@@ -30,13 +30,12 @@ function _install() {
 	chown -R dev:dev /usr/local/zookeeper/
 	chown -R dev:dev /opt/zookeeper/data/
 	chown -R dev:dev /opt/zookeeper/logs/
-	
 	echo "zookeeper install success !!!"
 }
 
 # start zookeeper
 function _start() {
-	su - dev -c 'sh ${zookeeper_home}/bin/zkServer.sh start'
+	su - dev -c "sh ${zookeeper_home}/bin/zkServer.sh start"
 	echo "zookeeper start success !!!"
 }
 
